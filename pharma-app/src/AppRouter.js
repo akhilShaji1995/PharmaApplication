@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import ProductDetails from './components/ProductDetails';
+import HomeComponent from './components/HomeComponent';
+import ProductDetailsComponent from './components/ProductDetailsComponent';
 
 const AppRouter = () => {
   return (
@@ -18,8 +20,12 @@ const AppRouter = () => {
         </ul>
       </nav>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/" element={<Home />}>
+          <Route path="home-component" element={<HomeComponent />} />
+        </Route>
+        <Route path="/product-details" element={<ProductDetails />}>
+          <Route path="product-details-component" element={<ProductDetailsComponent />} />
+        </Route>
       </Routes>
     </Router>
   );
