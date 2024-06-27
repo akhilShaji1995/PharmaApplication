@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div>
+    <div className="container">
       <h1>Home Page</h1>
       <p>Welcome to the Pharma application.</p>
       <nav>

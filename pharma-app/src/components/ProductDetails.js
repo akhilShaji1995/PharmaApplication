@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const ProductDetails = () => {
   return (
-    <div>
+    <div className="container">
       <h1>Product Details</h1>
       <p>Here you can find details of our pharmaceutical products.</p>
       <nav>
