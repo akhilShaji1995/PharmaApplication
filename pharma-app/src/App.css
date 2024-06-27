@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f5f5f5;
 }
 
 nav {
@@ -34,6 +35,10 @@ nav ul li a:hover {
 
 .container {
   padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
@@ -44,6 +49,15 @@ p {
   color: #666;
 }
 
-nav ul li a.active {
-  font-weight: bold;
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

@@ -1,8 +1,13 @@
-// src/components/Home.js
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate('/product-details');
+  };
+
   return (
     <div className="container">
       <h1>Home Page</h1>
@@ -14,6 +19,9 @@ const Home = () => {
           </li>
         </ul>
       </nav>
+      <button onClick={handleNavigation} style={{ marginTop: '20px' }}>
+        Go to Product Details
+      </button>
       <Outlet />
     </div>
   );
