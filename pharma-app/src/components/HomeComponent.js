@@ -1,4 +1,3 @@
-// src/components/HomeComponent.js
 import React from 'react';
 
 const HomeComponent = () => {
