@@ -1,3 +1,4 @@
+/* src/App.css */
 
 body {
   font-family: Arial, sans-serif;
@@ -64,20 +65,44 @@ button:hover {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .product {
   background-color: #e9e9e9;
   padding: 10px;
   border-radius: 5px;
-  width: calc(33.333% - 20px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .product h3 {
   margin-top: 0;
 }
-
 .cart {
-  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item button {
+  background-color: #ff4d4d;
 }

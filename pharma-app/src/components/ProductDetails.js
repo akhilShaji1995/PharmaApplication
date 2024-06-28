@@ -11,6 +11,12 @@ const ProductDetails = () => {
         const savedCart = localStorage.getItem('cart');
         return savedCart ? JSON.parse(savedCart) : [];
       });
+
+      const removeFromCart = (product) => {
+        setCart((cart) =>
+            cart.filter((item) => item.id !== product.id)
+        );
+      };
     
       useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
@@ -54,7 +60,7 @@ const ProductDetails = () => {
           </ul>
         )}
       </div> */}
-      <Cart cart={cart} />
+      <Cart cart={cart} removeFromCart = {removeFromCart} />
     </div>
   );
 };
