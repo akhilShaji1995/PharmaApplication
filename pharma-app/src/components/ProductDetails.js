@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import products from '../data/products';
+// import products from '../data/products';
+import ProductList from './ProductList';
+import Cart from './Cart';
 
 const ProductDetails = () => {
 
     const [cart, setCart] = useState([]);
-    const addToCart = (product) => {
+    const addToCarts = (product) => {
         setCart([...cart, product]);
       };
       
@@ -13,7 +15,7 @@ const ProductDetails = () => {
     <div className="container">
       <h1>Product Details</h1>
       <p>Here you can find details of our pharmaceutical products.</p>
-      <div className="product-list">
+      {/* <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product">
             <h3>{product.name}</h3>
@@ -21,7 +23,8 @@ const ProductDetails = () => {
             <button onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
         ))}
-      </div>
+      </div> */}
+      <ProductList addToCart={addToCarts} />
       <nav>
         <ul>
           <li>
@@ -30,7 +33,7 @@ const ProductDetails = () => {
         </ul>
       </nav>
       <Outlet />
-      <div className="cart">
+      {/* <div className="cart">
         <h2>Cart</h2>
         {cart.length === 0 ? (
           <p>No items in cart.</p>
@@ -41,7 +44,8 @@ const ProductDetails = () => {
             ))}
           </ul>
         )}
-      </div>
+      </div> */}
+      <Cart cart={cart} />
     </div>
   );
 };

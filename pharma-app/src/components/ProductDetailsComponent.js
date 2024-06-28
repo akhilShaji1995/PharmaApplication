@@ -1,4 +1,3 @@
-// src/components/ProductDetailsComponent.js
 import React from 'react';
 
 const ProductDetailsComponent = () => {
