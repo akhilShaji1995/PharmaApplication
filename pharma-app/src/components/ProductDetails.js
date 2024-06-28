@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-// import products from '../data/products';
 import ProductList from './ProductList';
 import Cart from './Cart';
+// import products from '../data/products';
 
 const ProductDetails = () => {
 
-    const [cart, setCart] = useState([]);
-    const addToCarts = (product) => {
+    // const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(() => {
+        const savedCart = localStorage.getItem('cart');
+        return savedCart ? JSON.parse(savedCart) : [];
+      });
+    
+      useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }, [cart]);
+    
+      const addToCart = (product) => {
         setCart([...cart, product]);
       };
       
@@ -24,7 +33,7 @@ const ProductDetails = () => {
           </div>
         ))}
       </div> */}
-      <ProductList addToCart={addToCarts} />
+      <ProductList addToCart={addToCart} />
       <nav>
         <ul>
           <li>

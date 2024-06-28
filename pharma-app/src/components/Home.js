@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import HomeComponent from './HomeComponent';
+// import HomeComponent from './HomeComponent';
 
 const Home = () => {
   const navigate = useNavigate();
